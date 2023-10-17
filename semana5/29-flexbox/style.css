@@ -1,0 +1,203 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 692px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.5;
+  background-color: black;
+  color: aliceblue;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-container {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  background-color: aqua;
+  border: 2px solid;
+  /* align-items: stretch; */
+}
+
+.container div {
+  width: 100%;
+  padding: 20px;
+  background-color: burlywood;
+  border: 2px solid ;
+  outline: 1px solid red;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+/* flex-direction: Cambia la orientación del eje principal */
+.direction {
+  flex-direction: row;
+}
+
+/* flex-wrap */
+.wrap {
+  /* flex-direction: column;
+  flex-wrap: wrap-reverse; */
+
+  /* short-hand */
+  /* direction | wrap */
+  flex-flow: row wrap;
+}
+
+/* alineación */
+.alineacion {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* align-content */
+.align-content {
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* align-content: center; */
+
+  /* short-hand */
+  /* align | justify */
+  place-content: center center;
+}
+
+/* align-self */
+.align-self {
+  flex-direction: column;
+}
+
+.align-self div:nth-child(1) {
+  align-self: flex-start;
+}
+.align-self div:nth-child(2) {
+  align-self: flex-end;
+}
+.align-self div:nth-child(3) {
+  align-self: center;
+}
+.align-self div:nth-child(4) {
+  align-self: baseline;
+}
+.align-self div:nth-child(5) {
+  align-self: stretch;
+}
+
+/* grow */
+.grow {
+  /* flex-wrap: wrap; */
+  align-items: center;
+}
+
+.grow div:nth-child(1) {
+  flex-grow: 0;
+}
+.grow div:nth-child(2) {
+  flex-grow: 2;
+}
+.grow div:nth-child(3) {
+  flex-grow: 3;
+}
+
+/* Shrink */
+.shrink {
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.shrink div:nth-child(1) {
+  flex-shrink: 1;
+}
+.shrink div:nth-child(2) {
+  flex-shrink: 2;
+}
+.shrink div:nth-child(3) {
+  flex-shrink: 3;
+}
+.shrink div:nth-child(4) {
+  flex-shrink: 4;
+}
+.shrink div:nth-child(5) {
+  flex-shrink: 5;
+}
+
+/* basis */
+.basis {
+  align-items: center;
+}
+
+.basis div:nth-child(1) {
+  /* flex-basis: 150px; */
+  /* width: 500px !important; */
+  flex: 2 1 100px;
+}
+.basis div:nth-child(2) {
+  /* flex-basis: 50px; */
+  flex: 3 1 100px;
+}
+.basis div:nth-child(3) {
+  /* flex-basis: 200px; */
+  /* short-hand */
+  /* grow | shrink | basis */
+  flex: 4 1 100px;
+}
+
+/* Huecos (gaps) */
+.gaps {
+  /* justify-content: center;
+  align-items: center; */
+  flex-wrap: wrap;
+  place-content: center center;
+
+  gap: 10px;
+  /* row | column */
+  gap: 10px 15px;
+}
+
+/* order */
+.order {
+  align-items: center;
+}
+
+.order div:nth-child(1) {
+ order: 4;
+}
+.order div:nth-child(2) {
+ order: 1;
+}
+.order div:nth-child(3) {
+ order: 5;
+}
+.order div:nth-child(4) {
+ order: 2;
+}
+.order div:nth-child(5) {
+ order: 5;
+}
+
+/* z-index */
+.z-index div:nth-child(2) {
+  margin-left:  -50px;
+  z-index: 1;
+}
+
+/* RETO DE FLEXBOX-FROGGY */
+/* https://flexboxfroggy.com/ */

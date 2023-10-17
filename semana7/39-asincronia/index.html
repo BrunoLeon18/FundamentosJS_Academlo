@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asincronía</title>
+		<!-- <script src="./01_asincronia.js" defer></script> -->
+		<!-- <script src="./02_callbacks.js" defer></script> -->
+		<!-- <script src="./03_promesas.js" defer></script> -->
+		<script src="./04_async_await.js" defer></script>
+  </head>
+  <body>
+		<h1>Asincronía</h1>
+		<p>La asincronía es uno de los conceptos principales que rige el mundo de Javascript. Cuando comenzamos a programar, normalmente realizamos tareas de forma síncrona, llevando a cabo tareas secuenciales que se ejecutan una detrás de otra, de modo que el orden o flujo del programa es sencillo y fácil de observar en el código.</p>
+
+		<h2>Concurrencia vs Paralelismo</h2>
+		<img src="asincronia-vs-paralelismo.jpg" alt="" width="500">
+
+		<p>JavaScript es un lenguaje que trabaja con concurrencia y a su vez se considera lenguaje no bloqueante:</p>
+		<img src="https://i2.wp.com/www.pensemosweb.com/wp-content/uploads/2018/11/event-loop.jpeg?resize=640%2C480" alt="" width="500">
+
+		<p>Para poder resolver los temas de operaciones asíncronas implementó varias formas de gestionar la asinconía, donde las más populares son las siguientes:</p>
+		<ul>
+			<li>callbacks: Probablemente, la forma más clásica de gestionar la asincronía en Javascript.</li>
+			<li>promesas: Una forma más moderna y actual de gestionar la asincronía.</li>
+			<li>async/await: Seguimos con promesas, pero con async/await añadimos más azúcar sintáctico.</li>
+			<li>top-level await: Unavariación de la anterior, donde no es necesario usar async.</li>
+		</ul>
+		<section>
+			<h2>Callbacks</h2>
+			<p>Las funciones callback pueden utilizarse como un primer 
+				intento de manejar la asincronía en un programa. De hecho, eran muy utilizadas en la época dorada de jQuery.</p>
+		</section>
+		<section>
+			<h2>Promesas</h2>
+			<p>Una promesa es un objeto JavaScript especial, la función pasada a new Promise se llama ejecutor.</p>
+			<p>Cuando se crea new Promise, el ejecutor corre automáticamente.</p>
+		</section>
+		<section>
+			<h2>Async - Await</h2>
+			<p>En 2017 se introducen las palabras clave async/await, que no son más que una forma de azúcar sintáctico para gestionar las promesas de una forma más sencilla. Con async/await seguimos utilizando promesas, pero abandonamos el modelo de encadenamiento de .then() para utilizar uno en el que trabajamos de forma más tradicional.</p>
+		</section>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de caja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Modelo de Caja</h1>
+    <p>
+      El modelo de caja es la forma en que CSS ve a los elementos HTML ¿Cómo los
+      ve? como si fueran cajas con las siguientes propiedades:
+    </p>
+    <ol>
+      <li>
+        El contenido (content): El contenido (texto) del elemento HTML, tomando
+        en cuenta sus dimensiones (width & height)
+      </li>
+      <li>El borde (border): Lo que delimita cada uno de los elementos HTML</li>
+      <li>
+        El relleno (padding): Son las distancias internas (La distancia del
+        borde al contenido)
+      </li>
+      <li>
+        El margen (margin): Son las distancias externas (La distancia entre el
+        elemento html y sus elementos hermanos o padres)
+      </li>
+    </ol>
+    <p>Todo en CSS tiene una caja alrededor</p>
+    <img src="modelo.png" alt="modelo de caja" width="200px" />
+    <p>
+      Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
+    </p>
+    <ol>
+      <li>Arriba (top)</li>
+      <li>Derecha (right)</li>
+      <li>Abajo (bottom)</li>
+      <li>Izquierda (left)</li>
+    </ol>
+    <section>
+      <h2>Tipos de modelos de caja</h2>
+      <article>
+        <h3>Modelo de cajas estándar</h3>
+        <p>
+          Por defecto, los navegadores usan el modelo de cajas estándar. Este
+          modelo no respeta el ancho y alto que le otorgues a tu "caja", ya que
+          termina siendo del tamaño de la suma total de todas las propiedades
+          que le asignes, es decir, padding y border formarán parte de su
+          contenido.
+        </p>
+        <div class="caja">Contenido</div>
+      </article>
+
+      <article>
+        <h3>Modelo de cajas alternativo</h3>
+        <p>
+          Si deseas activar el modelo de cajas alternativo para un elemento,
+          hazlo configurando box-sizing: border-box. Con ello, le dices al
+          navegador que tome como el borde de la caja el área definida por
+          cualquier tamaño que establezcas.
+        </p>
+        <div class="caja-alt">contenido</div>
+      </article>
+
+      <article>
+        <h3>A tomar en cuenta...</h3>
+        <p>
+          Un punto clave a la hora de entender los márgenes es el concepto de
+          colapso del margen. Si tienes dos elementos cuyos márgenes se tocan,
+          esos márgenes se combinan para convertirse en un solo margen, cuyo
+          tamaño es el del margen más grande.
+        </p>
+        <div class="caja-margen">contenido</div>
+        <div class="caja-margen-dos">contenido</div>
+      </article>
+
+      <article>
+        <h3>Modelo de caja y las cajas en línea</h3>
+        <p>
+          El modelo de cajas CSS completo se aplica a cajas que presentan
+          comportamiento en bloque; las cajas con comportamiento en línea solo
+          usan una parte del comportamiento definido en el modelo de cajas.
+        </p>
+        <p>
+          El tipo de caja que se aplica a un elemento está definido por los
+          valores de propiedad display, como inline y block.
+        </p>
+        <div class="content">
+          <div class="block">contenido</div>
+          <div class="block">contenido</div>
+          <div class="block">contenido</div>
+          <span class="inline">contenido</span>
+          <span class="inline">contenido</span>
+          <span class="inline">contenido</span>
+          <div class="inline-block">contenido</div>
+          <div class="inline-block">contenido</div>
+          <div class="inline-block">contenido</div>
+        </div>
+      </article>
+    </section>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

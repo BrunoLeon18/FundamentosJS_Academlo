@@ -1,0 +1,16 @@
+img {
+  width: 500px;
+}
+
+.cambiar {
+ background-color: blanchedalmond;
+ color: black;
+}
+
+.class-list {
+  font-style: italic;
+}
+
+.toggle {
+  background-color: blueviolet;
+}

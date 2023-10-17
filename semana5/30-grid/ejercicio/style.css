@@ -1,0 +1,105 @@
+:root {
+  --bg: #1b2430;
+  --bg-table: #007bff;
+  --bg-token: #e84959;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.prueba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2rem;
+}
+
+.contenedor {
+  border: 1px solid transparent;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--bg-table);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.contenedor>.elemento {
+  border: 1px solid transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 1em;
+  background-color: var(--bg-token);
+  font-size: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .contenedor>.elemento {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Escribe aquí tu codigo CSS */
+.contenedor .elemento:nth-child(1) {
+  order: 2;
+}
+
+.contenedor .elemento:nth-child(2) {
+  order: 9;
+}
+
+.contenedor .elemento:nth-child(3) {
+  order: 1;
+}
+
+.contenedor .elemento:nth-child(4) {
+  order: 8;
+}
+
+.contenedor .elemento:nth-child(5) {
+  order: 3;
+}
+
+.contenedor .elemento:nth-child(6) {
+  order: 7;
+}
+
+.contenedor .elemento:nth-child(7) {
+  order: 5;
+}
+
+.contenedor .elemento:nth-child(8) {
+  order: 4;
+}
+
+.contenedor .elemento:nth-child(9) {
+  order: 6;
+}

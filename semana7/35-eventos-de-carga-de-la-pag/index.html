@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" defer></script>
+  <title>Eventos Carga de Página</title>
+</head>
+<body>
+  <h1>Eventos de carga de la página</h1>
+  <ul>
+    <li>DOMContentLoaded – el navegador HTML está completamente cargado y el árbol DOM está construido, pero es posible que los recursos externos como <img> y hojas de estilo aún no se hayan cargado.</li>
+    <li>load – no solo se cargó el HTML, sino también todos los recursos externos: imágenes, estilos, etc.</li>
+    <li>beforeunload/unload – el usuario sale de la pagina.</li>
+  </ul>
+  <section>
+    <h2>readyState</h2>
+    <p>La propiedad document.readyState nos informa sobre el estado de carga actual.</p>
+    <p>Hay tres valores posibles</p>
+    <ul>
+      <li>"loading" – el documento se está cargando.</li>
+      <li>"interactive" – el documento fue leído por completo. (DOMContentLoaded)</li>
+      <li>"complete" – el documento se leyó por completo y todos los recursos (como imágenes) también se cargaron. (load)</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Async y Defer</h2>
+    <article>
+      <h3>Async</h3>
+      <p>Los scripts async cargan en segundo plano y se ejecutan cuando están listos.</p>
+      <p>Se coloca en la etiqueta de apertura de tu script en donde linkeas tu documento JS.</p>
+    </article>
+    <article>
+      <h3>Defer</h3>
+      <p>El atributo defer indica al navegador que no espere por el script. En lugar de ello, debe seguir procesando el HTML, construir el DOM. El script carga “en segundo plano” y se ejecuta cuando el DOM esta completo.</p>
+      <p>Se coloca en la etiqueta de apertura de tu script en donde linkeas tu documento JS.</p>
+    </article>
+  </section>
+</body>
+</html>

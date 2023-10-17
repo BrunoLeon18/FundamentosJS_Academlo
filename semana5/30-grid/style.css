@@ -1,0 +1,210 @@
+:root {
+  --color: 180;
+  --bg-color: var(--color), 100%, 35%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #ccc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.elemento {
+  border: 1px solid white;
+  background-color: hsl(var(--bg-color));
+}
+
+/* Grid */
+.contenedor {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid crimson;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: flex-start;
+}
+
+.contenedor > *,
+.contenedor-explicito > *,
+.contenedor-implicito >*,
+.contenedor2 > * {
+  display: flex;
+  color: #111;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid explicito */
+.contenedor-explicito {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid crimson;
+  display: grid;
+
+  /* auto */
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+
+  /* fr */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  /* repeat(numero, fr % px auto) */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  /* Intercalar filas y columnas */
+  /* grid-template-columns: repeat(9, 20px 50px 10px); */
+  /* grid-template-rows: repeat(9, 20px 50px 10px); */
+
+  /* minmax(min, max) */
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  /* grid-template-rows: repeat(3, 1fr); */
+
+  /* gap */
+  padding: 10px;
+  /* column-gap:  1rem;
+  row-gap: 2rem; */
+
+  /* short-hand */
+  /* filas | columnas */
+  gap: 1rem 2rem;
+  gap: 10px;
+}
+
+/* grid implicito */
+.contenedor-implicito {
+  width: 100%;
+  height: 100%;
+  border: 1px solid crimson;
+  display: grid;
+
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(3, 100px);
+
+  /* grid auto rows | columns */
+  /* grid-auto-rows: 100px; */
+  grid-auto-columns: 100px;
+
+  /* flujo */
+  grid-auto-flow: column;
+
+  /* auto-fit */
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+
+  /* auto-fill */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+/* Grid-items */
+.contenedor2 {
+  width: 100%;
+  height: 50vh;
+  border: 1px solid crimson;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+/* Con columnas */
+.contenedor2 .elemento:nth-child(10) {
+  background-color: coral;
+
+  /* grid-column-start: 3;
+  grid-column-end: 5; */
+
+  /* short-hand */
+  /* start | end */
+  grid-column: 3 / 5;
+
+  /* short-hand con span */
+  /* start | end */
+  /* grid-column: 3 / span 2; */
+
+  /* con valores negativos */
+  /* grid-column: 2 / -2; */
+}
+
+.contenedor2 .elemento:nth-child(6) {
+  background-color: green;
+
+  grid-column: 2 / 3;
+
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+
+  /* short-hand */
+  /* start | end */
+  /* grid-row: 2 / 4; */
+
+  /* short-hand con span */
+  /* start | end */
+  grid-row: 2 /  span 2;
+  
+  /* con valores negativos */
+  grid-row: 2 / -2;
+
+}
+
+/* Grid areas */
+.container-areas {
+  display: grid;
+  min-height: 100vh;
+
+  grid-template:
+  "header header header header" 20%
+  "nav nav nav nav" 10%
+  "asidet main main asideb" 60%
+  "footer footer footer footer" 10%
+  ;
+}
+
+.header,
+.nav,
+.aside-top,
+.main,
+.aside-bottom,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-areas .header {
+  background-color: lightcoral;
+  grid-area: header;
+}
+.container-areas .nav {
+  background-color: lightgreen;
+  grid-area: nav;
+
+}
+.container-areas .aside-top {
+  background-color: yellow;
+  grid-area: asidet;
+
+}
+.container-areas .main {
+  background-color: blueviolet;
+  grid-area: main;
+
+}
+.container-areas .aside-bottom {
+  background-color: lightseagreen;
+  grid-area: asideb;
+
+}
+.container-areas .footer {
+  background-color: lightskyblue;
+  grid-area: footer;
+
+}
+
+/* RETO GRID GARDEN */
+/* https://cssgridgarden.com/ */

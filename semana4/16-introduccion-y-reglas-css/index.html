@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción a CSS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <h1>¿Qué es CSS?</h1>
+  <p>
+    Las siglas CSS (Cascading Style Sheets) significan "Hojas de estilo en Cascada" y parten de un concepto simple pero muy potente: aplicar estilos (colores, formas, márgenes, etc...) a uno o varios documentos HTML de forma masiva.
+  </p>
+  <section>
+    <h2>Conceptos Básicos</h2>
+    <article>
+      <h3>¿Qué es la sintaxis CSS?</h3>
+      <p>Se considera sintaxis al orden y relación de los elementos que componen una correcta instrucción.</p>
+      <img src="./assets/img/sintaxis.jpg" alt="">
+    </article>
+    <article>
+      <h3>¿Qué es una regla CSS?</h3>
+      <p>Una regla CSS es la forma adecuada de escribir una instrucción mediante código CSS, es decir, la manera en que se debe escribir código CSS para que éste sea interpretado y aplicado correctamente por el navegador web.</p>
+      <img src="./assets/img/regla-css.jpg" alt="">
+    </article>
+  </section>
+  <section>
+    <h2>Anatomía de una regla CSS</h2>
+    <p>Una regla CSS está formada principalmente por uno o más selectores y una o más declaraciones, la o las declaraciones siempre van dentro de llaves, cada declaración se compone de la propiedad con su respectivo valor.</p>
+    <img src="./assets/img/partes-regla.jpg" alt="" width="1000">
+  </section>
+  <section>
+    <h2>Tipos de selectores</h2>
+    <article>
+      <h3>Selector universal</h3>
+      <p>Este selector en CSS selecciona todos los elementos de un documento</p>
+    </article>
+    <article>
+      <h3>Selector de tipo</h3>
+      <p>Los selectores de tipo en CSS se refieren a los selectores que apuntan a un tipo de elemento HTML</p>
+    </article>
+    <article>
+      <h3>Selectores de id, atributo y clase</h3>
+      <p>Este tipo de selectores en CSS apuntan a un elemento HTML identificado, es decir, a un elemento HTML que tenga el atributo id o class.</p>
+      <p>Tanto el selector de tipo id, atributo y class funcionan de la misma manera; la única diferencia es que para los selectores de tipo id se le antepone el signo de numeral (#), para los selectores de atributo corchetes ([]) y a los de tipo class un punto (.)</p>
+      <p id="soy_un_id">Elemento seleccionado por id</p>
+      <p class="soy-una-clase">Elemento seleccionado por clase</p>
+      <p atributo>Elemento seleccionado por atributo</p>
+    </article>
+  </section>
+  <section class="contenedor-principal">
+    <h2>Operadores de combinación de selectores</h2>
+    <p>Con ayuda de los operadores de combinación puedes combinar otros selectores con el fin de delimitar elementos de nuestros documentos.</p>
+    <article>
+      <h3>Hijos directos</h3>
+      <p>El selector «mayor qué» (símbolo «>») es utilizado en CSS para seleccionar todos los elementos que sean directamente descendientes de otro, es decir, que sean hijos directos de un determinado elemento padre, por eso también se conoce como «selector de hijos«.</p>
+    </article>
+    <article>
+      <h3>Hijos descendientes</h3>
+      <p>Para seleccionar a todos los descendientes del contenedor padre no es necesario el selector «mayor qué», sólo es necesario colocar el selector padre seguido del elemento descendiente que quieres estilar.</p>
+    </article>
+    <article>
+      <h3>Hermanos adyacentes</h3>
+      <p>Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.</p>
+      <ul>
+        <li class="item1">Hermano 1</li>
+        <li class="item2">Hermano 2</li>
+        <li class="item3">Hermano 3</li>
+        <li class="item4">Hermano 4</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Hermanos operador general</h3>
+      <p>El combinador ~ separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.</p>
+      <ul>
+        <li class="items1">Hermano 1</li>
+        <li class="items2">Hermano 2</li>
+        <li class="items3">Hermano 3</li>
+        <li class="items4">Hermano 4</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Subclases</h3>
+      <p>Con las subclases también podemos combinar selectores, basta con seleccionar el tipo de elemento seguido de la clase a la que haremos referencia.</p>
+      <ul>
+        <li>Hermano 1</li>
+        <li class="items-li">Hermano 2</li>
+        <li>Hermano 3</li>
+        <li class="items-li">Hermano 4</li>
+      </ul>
+    </article>
+  </section>
+  <section class="contenedor-secundario">
+    <h2 class="titulo">Selectores de pseudo-clase</h2>
+    <p>Es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Se colocan (:) seguidos de la palabra clave.</p>
+    <ul class="list">
+      <li>Primer hijo</li>
+      <li>Segundo hijo</li>
+      <li>Tercer hijo</li>
+      <li>Cuarto hijo</li>
+      <li>Quinto hijo</li>
+      <li>Sexto hijo</li>
+      <li>Séptimo hijo</li>
+      <li>Octavo hijo</li>
+      <li>Noveno hijo</li>
+      <li>Décimo hijo</li>
+    </ul>
+    <p>Lorem.</p>
+    <p>Lorem.</p>
+  </section>
+  <section>
+    <h2 class="title-selectores">Selectores de pseudo-elemento</h2>
+    <p class="txt-selectores">Permiten añadir estilos a una parte concreta del documento.</p>
+    <p class="first-letter">Seleccionando la primer letra</p>
+    <p class="first-line">Seleccionando la primer línea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, at. Maxime dignissimos iusto laborum at omnis nostrum placeat debitis eum natus aut, aspernatur nemo deleniti blanditiis delectus sequi accusamus. Fuga. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate expedita inventore quisquam rerum tempore eaque nam nesciunt ipsa dolorem odit reprehenderit illo, ea nemo maiores modi? Repellat facere repudiandae sed.</p>
+    <h3>No todos los pseudo-elementos requieren de un selector</h3>
+  </section>
+</body>
+</html>

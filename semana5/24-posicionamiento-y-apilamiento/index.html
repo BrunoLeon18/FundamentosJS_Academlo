@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento y Apilamiento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Posicionamiento y Apilamiento</h1>
+
+    <section>
+      <h2>Posicionamiento</h2>
+      <p>
+        La propiedad POSITION nos permite modificar la posición natural de
+        cualquier elemento del documento HTML. Con «position» podemos alterar la
+        posición de algunas cajas o poner un elemento fijo, ya sea en la parte
+        superior o en la parte que deseemos.
+      </p>
+      <h3>Tipos de Posicionamiento:</h3>
+      <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>absolute</li>
+        <li>fixed</li>
+        <li>sticky</li>
+      </ul>
+      <article>
+        <h3>Posicionamiento Estático</h3>
+        <p>
+          Static en la posición que viene por defecto en todos los elementos.
+        </p>
+        <div class="contenedor-p">
+          <div class="cajas static">estático</div>
+          <p>Texto</p>
+        </div>
+      </article>
+      <article>
+        <h3>Posicionamiento relativo</h3>
+        <p>
+          El elemento conserva sus dimensiones en su posición original del
+          documento. Si se mueve toma como referencia esa posición, es decir,
+          que aunque físicamente se vea movimiento en la caja, su lugar queda
+          reservado en el documento, por lo que el texto debajo sigue igual, no
+          ocupa el lugar de la caja.
+        </p>
+        <div class="contenedor-p">
+          <div class="cajas relative">relativo</div>
+          <p>Texto</p>
+        </div>
+      </article>
+      <article>
+        <h3>Posicionamiento absoluto</h3>
+        <p>
+          El elemento pierde sus dimensiones en su posición original del
+          documento, el resto de elementos se comporta como si no existira en el
+          documento. Si se mueve puede tomar como referencia 2 elementos:
+        </p>
+        <ol>
+          <li>El primer ancestro con posicionamiento relativo.</li>
+          <li>
+            Si no encuentra un ancestro relativo, se mueve respecto al documento
+            HTML.
+          </li>
+        </ol>
+        <div class="contenedor-p padre-relativo">
+          <div class="cajas absolute">absoluto</div>
+          <p>Texto</p>
+        </div>
+      </article>
+      <article>
+        <h3>Posicionamiento fijado</h3>
+        <p>
+          El elemento pierde sus dimensiones en su posición original del
+          documento, el resto de elementos se comporta como si no existira en el
+          documento. Si se mueve toma como referencia al viewport y se queda
+          fijo en esa posición, es decir, cuando el scroll se mueva, el elemento
+          no lo hará.
+        </p>
+        <div class="contenedor-p">
+          <div class="cajas fixed">fijo</div>
+          <p>Texto</p>
+        </div>
+      </article>
+      <article>
+        <h3>Posicionamiento pagajoso</h3>
+        <p>
+          Sticky es una combinación de posicionamiento relative y fixed, para
+          este posicionamiento las propiedades de top, left, bottom y right no
+          mueven el elemento, sirven como un punto de referencia, mientras no
+          lleguen a ese valor el elemento se comporta como relative, cuando
+          llega se convierte en fixed.
+        </p>
+        <p>
+          Para que este comportamiento funcione el elemento sticky debe ser hijo
+          directo del body o su elemento contenedor debe tener dimensiones
+          definidas y sólo será sticky dentro de las dimensiones de su
+          contenedor padre.
+        </p>
+        <div class="contenedor-p h-400">
+          <div class="cajas sticky">pegajoso</div>
+          <p>Texto</p>
+        </div>
+      </article>
+    </section>
+    <section>
+      <h2>Apilamiento</h2>
+      <p>
+        Nos permite establecer el orden de apilamiento de un elemento
+        posicionado, es decir, ordenar elementos después de haber removido el
+        flujo normal de una página, ya que por defecto el apilamiento va a ser
+        conforme esté escrito el documento HTML.
+      </p>
+      <article>
+        <h3>La propiedad z-index</h3>
+        <p>
+          Es una propiedad que está pensada para ordenar elementos en el eje Z,
+          prácticamente es el eje que sale del plano de la pantalla; en palabras
+          sencillas, z-index sirve para poner elementos uno sobre otros.
+        </p>
+        <p>
+          Cabe recalcar que z-index actúa sobre elementos posicionados, es
+          decir, que posean la propiedad position y además cuyo valor sea
+          distinto de static, z-index no actúa sobre elementos no posicionados.
+        </p>
+
+        <div class="contenedor-a">
+          <div class="caja primero">caja 1</div>
+          <div class="caja segundo">caja 2</div>
+          <div class="caja tercero">caja 3</div>
+        </div>
+        <br /><br /><br />
+        <h3>Stacking Context</h3>
+        <p>
+          Hay un concepto con conocido como stacking context, el cual hace
+          referencia a que cada bloque tiene su contexto. Debido a esto
+          elementos hijos de elementos padres únicamente respetarán su z-index
+          hasta el z-index del padre.
+        </p>
+        <div class="contenedor-z relatives">
+          <div class="bloque1">
+            <div class="cajita">b1</div>
+            <div class="cajita">b1</div>
+            <div class="cajita">b1</div>
+          </div>
+          <div class="bloque2">
+            <div class="cajita">b2</div>
+            <div class="cajita">b2</div>
+            <div class="cajita">b2</div>
+          </div>
+          <div class="bloque3">
+            <div class="cajita">b3</div>
+            <div class="cajita">b3</div>
+            <div class="cajita">b3</div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <br /><br /><br />
+    <h3>Happy Code!!!</h3>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>  
+</head>
+
+<body>
+  <h1>DOM</h1>
+  <section>
+    <h2>Javascript en el Navegador</h2>
+    <p>Hay un objeto “raíz” llamado window.</p> 
+    <p>Este tiene dos roles:</p>
+    <ul class="padre">
+      <li class="hijo">Primero: es un objeto global para el código JavaScript.</li>
+      <li>Segundo: representa la “ventana del navegador” y proporciona métodos para controlarla.</li>
+    </ul>
+    <p>El “Objeto global” proporciona variables y funciones que están disponibles en todo el código, al igual que aquellas que están integradas en el lenguaje o el entorno.</p>
+    <img src="window.png" alt="window">
+  </section>
+  <section>
+    <h2>Un poco sobre BOM</h2>
+    <p>El BOM es el Modelo de Objetos del Navegador (BOM: Browser Object Model) estos objetos son objetos adicionales proporcionados por el navegador (entorno host) para trabajar con todo excepto el documento.</p>
+  </section>
+  <section>
+    <h2>¿Qué es el DOM?</h2>
+    <p>El DOM es el Modelo de Objetos del Documento</p>
+    <p>Según el Modelo de Objetos del Documento (DOM: Document Object Model), cada etiqueta HTML es un objeto, incluso el texto dentro de una etiqueta también es un objeto y todos estos objetos son accesibles empleando JavaScript, y podemos usarlos para modificar la página.</p>
+    <p>El DOM representa HTML como una estructura de árbol de etiquetas.</p>
+    <img src="DOM-arbol.png" alt="dom">
+    <p>Cada nodo del árbol es un objeto.</p>
+    <p>Las etiquetas son nodos de elementos y forman la estructura del árbol: «html» está ubicado en la raíz del documento, por lo tanto, «head» y «body» son sus hijos directos y estos tienen a su vez hijos directos, los cuales serán descendientes de html.</p>
+    <p>El texto dentro de los elementos formará nodos de texto, etiquetados como #text. Un nodo de texto contiene solo una cadena. Esta puede no tener hijos y siempre es una hoja del árbol.</p>
+    <p>Los espacios y líneas nuevas son caracteres totalmente válidos, al igual que letras y dígitos. Ellos forman nodos de texto y se convierten en parte del DOM.</p>
+    <p>Existen otros tipos de nodos además de elementos y nodos de texto. Por ejemplo, los comentarios, los cuales generan un nuevo tipo de nodo de árbol, “nodo de comentario”, etiquetado como #comment</p>
+    <p>Todo en HTML, incluso los comentarios, se convierte en parte del DOM.</p>
+    <p>Hay 12 tipos de nodos. En la práctica generalmente trabajamos con 4 de ellos:</p>
+    <ul>
+      <li>document el “punto de entrada” en el DOM.</li>
+      <li>nodos de elementos Etiquetas-HTML, los bloques de construcción del árbol.</li>
+      <li>nodos de texto contienen texto.</li>
+      <li>comentarios a veces podemos colocar información allí, no se mostrará, pero JS puede leerla desde el DOM.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Navegando por el DOM</h2>
+    <p>El DOM nos permite hacer cualquier cosa con sus elementos y contenidos, pero lo primero que tenemos que hacer es llegar al objeto correspondiente del DOM. Recordemos document es el principal “punto de entrada” al DOM. Desde ahí podremos acceder a cualquier nodo.</p>
+    <p>Los tres nodos superiores están disponibles como propiedades de document:</p>
+    <ol>
+      <li>document.documentElement Este es el nodo del DOM para la etiqueta «html»</li>
+      <li>Otro nodo muy utilizado es el elemento document.body para la etiqueta «body»</li>
+      <li>La etiqueta «head» está disponible como document.head.</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Métodos de búsqueda</h2>
+    <article>
+      <h3 class="by_class">getElementByClassName</h3>
+
+      <h4 class="by_tag">getElementByTagName</h4>
+
+      <h3 id="by_id">getElementByID</h3>
+
+      <h3 class="query-all">querySelectorAll</h3>
+      <ul class="query-all">
+        <li class="query-all">querySelectorAll</li>
+        <li class="query-all">querySelectorAll</li>
+      </ul>
+
+      <h3 class="query-selector">querySelector</h3>
+      <ul class="query-tag">
+        <li class="query-selector">querySelector 1</li>
+        <li id="query_selector">querySelector 2</li>
+      </ul>
+
+      <a class="link" href="#" target="_blank">Enlace querySelector</a>
+
+      <h5 id="matches">matches</h5>
+      <h5>matches1</h5>
+      <h5>matches2</h5>
+
+      <div>
+        <span>Closest</span>
+        <span>Closest</span>
+      </div>
+
+      <ul class="contains">
+        <li>Contains</li>
+        <li>Contains</li>
+      </ul>
+    </article>
+  </section>
+  <section>
+    <h2>Propiedades del nodo</h2> 
+    <article class="properties">
+      <h3>innerHTML</h3>
+      <ul id="contenedor"></ul>
+
+      <h3>outerHTML</h3>
+
+      
+      <h3 class="hidden">hidden</h3>
+      
+      <h3 class="text-content">textContent</h3>
+      
+      <!-- Soy un comentario y un nodo -->
+    </article>
+  </section>
+  <section>
+    <h2 class="manipulando">Manipulando el DOM</h2>
+    <article>
+      <h3>Métodos de inserción</h3>
+      <ul class="manipulando2">
+        <li>soy un li</li>
+        <li>soy un li</li>
+      </ul>
+      <br><br>
+      <div id="insert"></div>
+    </article>
+    <article>
+      <h3>Método de eliminación</h3>
+      <p class="delete">Elimíname</p>
+    </article>
+    <article>
+      <h3>Método para clonar</h3>
+      <p class="clone">Cloname</p>
+    </article>
+  </section>
+  <section>
+    <h2>Atributos y propiedades</h2>
+
+    <p data-miatributo= "algo" class="mi-atributo">Mi atributo</p>
+    <p class="obteniendo">Obteniendo atributo</p>
+    <p width="200" class="cambiando">Cambiando Atributo</p>
+    <a href="http" target="_blank" class="attributes">Obteniendo todos los atributos</a>
+  </section>
+  <section>
+    <h2>Estilos y Clases</h2>
+
+    <p id="textBg">Estilo en línea</p>
+    <p id="changeClass">Con className</p>
+    <p id="handleClassList" class="cambiar">Con classList</p>
+  </section>
+</body>
+</html>

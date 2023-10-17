@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformaciones, Transiciones y Animaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Transformaciones, Transiciones y Animaciones</h1>
+  <p>El mundo del CSS es demasiado amplio, ahora que sabemos manejar perfectamente los conceptos principales, vayamos a un reto más grande. El poderoso mundo de las animaciones.</p>
+  <section>
+    <h2>Transformaciones</h2>
+    <p>Esta propiedad permite transformar a un elemento, es decir, podrás escalarlo, rotarlo, sesfarlo y trasladarlo.</p>
+    <p>Para poder trabajar comodamente con esta propiedad es necesario entender los ejes en CSS</p>
+    <img src="ejes-css.png" alt="">
+    <article>
+      <h3>Translate</h3>
+      <div class="container">
+        <div class="container__child translate"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Rotate</h3>
+      <div class="container">
+        <div class="container__child rotate"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Scale</h3>
+      <div class="container">
+        <div class="container__child scale"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Skew</h3>
+      <div class="container">
+        <div class="container__child skew"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Combinando métodos de transform</h3>
+      <div class="container">
+        <div class="container__child mixing"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Transform Origin</h3>
+      <div class="container">
+        <div class="container__child origin"></div>
+      </div>
+    </article>
+  </section>
+  <section>
+    <h2>Transiciones</h2>
+    <p>Una transición en CSS nos permite otorgar un tiempo entre el estado inicial y final de un elemento, logrando que estos cambios no ocurran de manera instantánea, lhaciendo de estas transiciones, una animación.</p>
+    <p>Debemos tene en cuenta que los elementos inline no se pueden animar, que todos los elementos tienen un estado inicial, que no todas las propiedades son animables, que debe haber un detonante para que una tansición suceda, es decir, no se ejecuta por sí sola.</p>
+    <article>
+      <h3>Cambiando Background</h3>
+      <div class="container">
+        <div class="container__child background"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Transition Property y Duration</h3>
+      <div class="container">
+        <div class="container__child container--color property">Hola</div>
+      </div>
+    </article>
+    <article>
+      <h3>Transition Timing Function</h3>
+      <div class="container">
+        <div class="container__child container--function function"></div>
+      </div>
+    </article>
+    <article>
+      <h3>Transition Delay</h3>
+      <div class="container">
+        <div class="container__child container--delay delay">Hola</div>
+      </div>
+    </article>
+    <article>
+      <h3>Juguemos con lo aprendido</h3>
+      <div class="carrito">
+        <a href="#avanzar" class="carrito__avanzar">Haz clic para mover al carrito hacía adelante</a>
+        <a href="#regresar" class="carrito__avanzar">Haz clic para mover al carrito hacía atrás</a>
+        <img id="avanzar" src="carrito.png" alt="carrito" class="carrito__img">
+      </div>
+    </article>
+  </section>
+  <section>
+    <h2>Animaciones</h2>
+    <p>Las animaciones permiten animar la transición de un estilo CSS a otro estilo, a diferencia de as transiciones no necesitan un detonador para iniciar y pueden ser ejecutadas cierto número de veces o de manera infinita.</p>
+    <p>Las animaciones requieren recursos del sistema, por ello es importante conocer la renderización de los elementos, por ejemplo, transform y opacity ocupan pocos recursos.</p>
+    <div class="carrito">
+      <img id="avanzar" src="carrito.png" alt="carrito" class="carrito__azul">
+    </div>
+  </section>
+</body>
+</html>

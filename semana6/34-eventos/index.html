@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <script src="main.js" defer></script>
+    <style>
+      body {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Eventos</h1>
+    <p>
+      Los eventos son notificaciones automatizadas de las acciones realizadas
+      por el usuario en el DOM, un click sobre algún elemento de la página,
+      pulsación de una tecla específica, reproducción de un archivo de audio o
+      video, scroll y muchas más.
+    </p>
+
+    <section>
+      <h2>Introducción a los eventos</h2>
+      <p>
+        Como proramadores debemos tener listo nuestro código para que cuando
+        ocurra determinado evento se lleve a cabo la funcionalidad asociada.
+      </p>
+      <p>Hay tres formas de asignar handlers:</p>
+      <ul>
+        <li>Atributos HTML: onclick= "..."</li>
+        <li>Propiedades del DOM: elem.onclick = function</li>
+        <li>
+          Métodos: elem.addEventListener(event, handler) para agregar,
+          removeEventListener para remover
+        </li>
+      </ul>
+      <h3>Atributo HTML</h3>
+      <!-- Handler atributo -->
+      <button type="button" onclick="(() => window.alert('desde Handler onclick en HTML'))()">Desde Atributo</button>
+
+      <h3>Propiedad del DOM</h3>
+      <!-- Handler Propiedad ID del elemento -->
+      <button type="button" id="propiedad">Desde propiedad ID</button>
+
+      <h3>Método addEventListener</h3>
+      <!-- Handler con Método -->
+      <button type="button" id="btn">Desde Método</button>
+    
+    </section>
+    <section>
+      <h2>Propagación</h2>
+      <p>El principio de propagación es simple. Cuando un evento ocurre en un elemento, este primero ejecuta los manejadores que tiene asignados, luego los manejadores de su padre, y así hasta otros ancestros.</p>
+      <!-- Propagacón  -->
+      <div class="contenedor propagacion">
+        <form id="form">
+          FORM
+          <div>
+            DIV
+            <p>P</p>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      
+      <a href="https://www.academlo.com" id="myLink" target="_blank">Enlace de ejemplo</a>
+      
+      <h2>Captura</h2>
+      <p>Hay otra fase en el procesamiento de eventos llamada “captura”. Es raro usarla en código real.</p>
+      <p>El estándar de eventos del DOM describe 3 fases de la propagación de eventos:</p>
+      <ul>
+        <li>Fase de captura – el evento desciende al elemento.</li>
+        <li>Fase de objetivo – el evento alcanza al elemento.</li>
+        <li>Fase de propagación – el evento se propaga hacia arriba del elemento.</li>
+      </ul>
+      <!-- Captura -->
+      <div class="contenedor captura">
+        <form>
+          FORM
+          <div>
+            DIV
+            <p>P</p>
+          </div>
+        </form>
+      </div>
+      <style>
+        .contenedor * {
+          margin: 10px;
+          border: 1px solid blue;
+        }
+      </style>
+    </section>
+    <section>
+      <!-- Delegación de Eventos -->
+    <section>
+      <h2>Delegación de eventos</h2>
+      <p>La captura y el propagación nos permiten implementar uno de los más poderosos patrones de manejo
+        de eventos llamado delegación de eventos.</p>
+    </section>
+      <h3>Ejemplo con productos</h3>
+      <div class="productos">
+        <div class="producto">
+          <div class="nombre">Producto 1</div>
+          <div class="precio">$100</div>
+          <button class="agregar" data-id="1">agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <div class="nombre">Producto 2</div>
+          <div class="precio">$200</div>
+          <button class="agregar" data-id="2">agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <div class="nombre">Producto 3</div>
+          <div class="precio">$300</div>
+          <button class="agregar" data-id="3"> <span>agregar al carrito</span> </button>
+        </div>
+      </div>
+
+      <h3>Ejemplo con contadores</h3>
+      <div class="counters">
+        count1: <input type="button" value="1" data-counter="counter">
+        count2: <input type="button" value="2" data-counter="counter">
+      </div>
+    </section>
+  </body>
+</html>

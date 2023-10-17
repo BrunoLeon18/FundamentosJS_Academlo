@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+  color: aliceblue;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.parrafo1::first-letter {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.parrafo2 {
+  color: black;
+  background-color: lightblue;
+}
+
+.parrafo3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+a::before {
+  content: '🫶';
+}
+
+a:hover {
+  color: aqua;
+}
+
+.contenido > p {
+  background-color: lightcyan;
+  text-decoration: underline;
+  color: black;
+}

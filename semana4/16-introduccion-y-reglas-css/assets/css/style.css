@@ -1,0 +1,129 @@
+/*** Tipos de selectores ***/
+/* Selector Universal */
+* {
+  font-size: 20px;
+}
+
+/* Selector de Tipo */
+body {
+  background-color: rgb(67, 66, 66);
+  color: rgb(189, 191, 195);
+}
+h2 {
+  color: indigo;
+}
+
+/* Selector de id */
+#soy_un_id {
+  background-color: crimson;
+}
+
+/* Selector de clase */
+.soy-una-clase {
+  background-color: aqua;
+  color: black;
+}
+
+/* Selector de atributo */
+[atributo] {
+  background-color: coral;
+}
+
+/*** Operadores de combinación ***/
+/* hijos descendientes */
+.contenedor-principal p {
+  background-color: darkcyan;
+}
+
+/* hijos directos */
+.contenedor-principal > p {
+  background-color: aquamarine;
+}
+
+/* hermanos adyacentes */
+.item1 + li {
+  background-color: blue;
+  color: aliceblue;
+}
+
+/* hermanos en general */
+.items1 ~ li {
+  background-color: darkgoldenrod;
+}
+
+/* subclases  */
+li.items-li {
+  background-color: blanchedalmond;
+}
+
+/*** Selector de pseudo-clase ***/
+.titulo:hover {
+  background-color: blueviolet;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+/* primer hijo li de la lista */
+.list li:first-child {
+  background-color: chartreuse;
+}
+
+/* último hijo li de la lista */
+.list li:last-child {
+  background-color: crimson;
+}
+
+/* hijo li que se indique entre () de la lista */
+.list li:nth-child(2) {
+  background-color: darkviolet;
+}
+
+.list li:nth-child(3n + 3) {
+              /*cuántos/desde*/
+  background-color: deepskyblue;
+}
+
+.list li:nth-child(even) {
+  /* número par */
+  color: black;
+}
+
+.list li:nth-child(odd) {
+  /* número impar */
+  color: deeppink;
+}
+
+.contenedor-secundario p:first-of-type {
+  text-decoration: line-through;
+}
+
+.contenedor-secundario p:last-of-type {
+  text-decoration: underline;
+}
+
+.contenedor-secundario p:nth-of-type(2) {
+  font-style: italic;
+}
+
+/*** Selectores de pseudo-elemento ***/
+.title-selectores::before {
+  content: '👆';
+}
+
+.txt-selectores::after {
+  content: '👩‍🏫';
+}
+
+.first-letter::first-letter {
+  font-size: 40px;
+}
+
+.first-line::first-line {
+  background-color: blue;
+}
+
+/* No todos los pseudo-elementos requieren de un selector */
+::selection {
+  background-color: black;
+  color: red;
+}

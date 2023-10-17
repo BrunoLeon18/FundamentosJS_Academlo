@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+  color: aliceblue;
+}
+
+/*** Cascada ***/
+.cascada {
+  background-color: blueviolet !important;
+}
+
+.cascada {
+  background-color: aqua;
+}
+
+/*** Especificidad ***/
+
+/* Etiquetas */
+table {
+  background-color: darkorange;
+}
+
+/* Pseudo-elementos */
+::selection {
+  background-color: black;
+  color: aliceblue;
+}
+
+/* Clases */
+.first-row {
+  background-color: darkolivegreen;
+}
+
+/* Atributos */
+[atributo] {
+  background-color: indianred;
+}
+
+/* Pseudoclases */
+tr:last-of-type {
+  background-color: gray;
+}
+
+/* Identificadores */
+#tercer_fila {
+  background-color:  lightseagreen;
+}
+
+/* Estilo en línea */
+/* Directamente en el elemento de HTML, como si fuese un atributo */
+
+/* Impotant */
+/* No usar, rompe cascada y especificidad*/
+
+/*** Herencia ***/
+.contenedor {
+  font-style: italic;
+  font-size: 12px;
+  height: 400px;
+  border: 1px solid;
+}
+
+.contenedor > p {
+  border: 1px solid red;
+  font-size: initial;
+  height: inherit;
+}
+

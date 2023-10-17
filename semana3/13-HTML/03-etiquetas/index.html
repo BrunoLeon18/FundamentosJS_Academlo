@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etiquetas</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header{
+        display: flex;
+        justify-content: flex-end;
+      }
+      nav{
+        margin-right: 20px;
+      }
+      nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+      }
+
+      nav ul li{
+        margin: 5px;
+        padding: 8px;
+        text-align: center;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+      a:hover{
+        color: greenyellow;
+        border-bottom: 2px solid greenyellow;
+      }
+      .list-group{
+        list-style: none;
+      }
+      details{
+        border: 2px solid;
+        margin: 10px;
+        
+      }
+     
+        </style>
+  </head>
+  <body>
+    <header>
+      <!-- Header: cabecera -->
+      <nav>
+        <!-- navegacion: Menu de navegacion -->
+        <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contac</a></li>
+            <li><a href="#">vision</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Main contiene todo el contenido importante
+        de la pagina y solo se puede colocar un elemento
+        por pagina y no puede ser descediente de otro elemento -->
+      <h1>mi primer pagina web</h1>
+      <section>
+        <h2>primer contenido</h2>
+        <article>
+          <h3>soy un tema del primer contenido</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi,
+            molestias laudantium nihil velit quam repellat molestiae quos veniam
+            repellendus rerum enim adipisci explicabo possimus sequi? Dicta
+            beatae provident voluptate?
+          </p>
+        </article>
+        <article>
+          <h3>soy otro tema del contenido</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi,
+            molestias laudantium nihil velit quam repellat molestiae quos veniam
+            repellendus rerum enim adipisci explicabo possimus sequi? Dicta
+            beatae provident voluptate?
+          </p>
+        </article>
+        <article>
+          <h3>y soy otro tema del contenido</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi,
+            molestias laudantium nihil velit quam repellat molestiae quos veniam
+            repellendus rerum enim adipisci explicabo possimus sequi? Dicta
+            beatae provident voluptate?
+          </p>
+        </article>
+        <article>
+          <h3>Introduccion</h3>
+          <a href="wwww.google.com" target="_blank" title="Este enlace me dirige a google" rel="noreferrer nofollow">google.com</a>
+        </article>
+        <article>
+          <h3>enlaces a otros documentos html</h3>
+          <a href="about.html" target="_blank">about</a>
+        </article>
+      </section>
+      <aside>
+        <!--Aside: contiene elementos que no son necesarios en la mayoriade 
+            las paginaspero que pueden ser utiles, suelen dejarse para 
+            espacios publicitarios -->
+            <h3>el aside</h3>
+      </aside>
+      <aside>
+        
+        <details>
+          <summary>Carreras tecnologicas</summary>
+            <ul class="list-group">
+              <li><a href="">Desarrollo web full stack</a></li>
+              <li><a href="">Desarrollo fornt end</a></li>
+              <li><a href="">Desarrollo baack end</a></li>
+              <li><a href="">Diseno ux/ui</a></li>
+            </ul>
+        </details>
+      
+      </aside>
+      <section>
+        <h2>Formularios</h2>
+        <form 
+        action="" 
+        method="get"
+        name="Primer_Formulario"
+        autocomplete="on"
+        target="_blank"
+        >
+      <fieldset>
+        <legend>Formulario de Contacto</legend>
+        <!-- tipo texto -->
+        <label for="nombre">Nombre:</label>
+        <input 
+        type="text" 
+        name="nombre" 
+        id="nombre" 
+        placeholder="Escribe tu nombre" 
+        autofocus 
+        spellcheck="true" 
+        required tabindex="1"
+        >
+
+        <br>
+
+        <!-- Tipo email -->
+        <label for="email">Correo:</label>
+        <input 
+        type="email" 
+        name="correo" 
+        id="email" 
+        placeholder="Escribe tu correo" 
+        pattern="[a-z0-9._%+-]+@[a-z0-9._]+\.[a-z]{2,}$"
+        tabindex="3"
+        >
+        <br>
+        
+        <!-- Tipo tel -->
+        <label for="tel">Telefono:</label>
+        <input 
+        type="tel" 
+        name="telefono" 
+        id="tel" 
+        placeholder="123-456-7890"
+        pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
+        maxlength="9"
+        size="10"
+        >
+        <br>
+        <!-- Tipo country -->
+        <label for="country">Pais:</label>
+        <input 
+        type="text" 
+        name="pais" 
+        id="country" 
+        placeholder="Selecciona tu pais" 
+        list="latam" 
+        tabindex="4"
+        >
+        <datalist id="latam">
+          <option value="Mexico"></option>
+          <option value="Costa Rica"></option>
+          <option value="Venezuela"></option>
+          <option value="Peru"></option>
+          <option value="Ecuador"></option>
+          <option value="Argentina"></option>
+          <option value="Colombia"></option>
+        </datalist>
+      </fieldset>
+      <br>
+      <!-- tipo Radio -->
+      <fieldset>
+        <legend>Necesitas Ayuda?</legend>
+        <label for="yes">Si</label>
+        <input type="radio" name="asesoria" id="yes" value="yes">
+        <label for="no">No</label>
+        <input type="radio" name="asesoria" id="no" value="no">
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>De que quieres hablar?</legend>
+        <select name="tema" id="select">
+          <optgroup label="Desarrollo Web">
+            <option value="Web">Desarrollo Web</option>
+            <option value="Front">Frontend</option>
+            <option value="Back">Backend</option>
+          </optgroup>
+          <optgroup label="Desarrollo Movil">
+            <option value="Android">Apps para android</option>
+            <option value="Ios">Apps para Ios</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Mensaje</legend>
+       <label for="message">Cuentame mas</label>
+       <br>
+       <textarea name="message" id="message" cols="30" rows="10" placeholder="Cuentame de ti"></textarea>
+      </fieldset>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpiar</button>
+      </form>
+      </section>
+    </main>
+    <footer>
+        <!--footer: pie de pagina-->
+        <h2>Pie de pagina</h2>
+        <nav>se puede colocar un nav</nav>
+    </footer>
+  </body>
+</html>

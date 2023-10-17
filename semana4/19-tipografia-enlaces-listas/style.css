@@ -1,0 +1,95 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap'); */
+
+body {
+  background-color: black;
+  color: aliceblue;
+}
+
+/* Tipografía */
+
+/* La fuentes seguras son aquellas que todo navegador tolera, y son las siguientes: monoscape, cursive, sans-serif, serif, fantasy */
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: -2px -2px 12px aqua;
+  text-align: center;
+  text-decoration: underline dashed red;
+  -webkit-text-stroke: 2px blue;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: monospace;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-align: center;
+  word-spacing: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+}
+
+p {
+  font-size: 20px;
+  text-indent: 15px;
+  line-height: 1.5;
+}
+
+.primer-enlace {
+  color: aquamarine;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Enlaces */
+a {
+  color: aquamarine;
+  text-decoration: none;
+  outline: none;
+  transition: .3s ease;
+}
+
+/* Para enlaces ya visitados */
+a:visited {
+  color: darkorange;
+}
+
+/* Para agregar efectos al pasar el mouse */
+a:hover {
+  color: dodgerblue;
+}
+
+/* Para agregar efecto al dar clic sostenido */
+a:active {
+  color: white;
+}
+
+/* Para cuando damos focus con el tab */
+a:focus {
+  color: hotpink; 
+  border: 1px solid aqua;
+}
+
+/* Para que el estilo en todos los estados del enlace se respete y sea correcto, el orden es el siguiente LINK -> VISITED -> HOVER -> ACTIVE -> FOCUS */
+
+/* Listas */
+
+/* Listas desordenadas */
+ul {
+  /* list-style-type: square; */
+  /* list-style-image: url(comprobar.png); */
+  text-align: center;
+  /* list-style-position: inside; */
+  list-style: inside url(comprobar.png);
+}
+
+/* Listas Ordenadas */
+ol {
+  /* list-style-type: square; */
+  /* list-style-image: url(comprobar.png); */
+  text-align: center;
+  /* list-style-position: inside; */
+  list-style: inside url(comprobar.png);
+}

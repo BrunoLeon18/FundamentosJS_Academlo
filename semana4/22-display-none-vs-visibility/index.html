@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display none vs Visibility</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Display None VS Visibility</h1>
+    <p>
+      La propiedad display y visibility de CSS, son dos propiedades interesantes
+      que nos permitirán controlar la forma en la que se muestran los elementos.
+    </p>
+    <section>
+      <h2>display: none;</h2>
+      <p>
+        La propiedad display nos permite elegir cómo se muestran los elementos
+        en la página, podemos indicar que se muestren como elementos de línea o
+        como elementos de bloque, como lo hemos visto anteriormente, además
+        podemos indicar que no se muestre.
+      </p>
+      <p>
+        El valor none de la propiedad display hace que elemento seleccionado
+        quede oculto en la página de resultado, de tal manera que el resto de
+        contenido se muestra como si dicho elemento no existiera pues none hace
+        que deje de ocupar espacio dentro de la estructura de página.
+      </p>
+      <p>Párrafo superior</p>
+      <hr />
+      <p id="hiddenp" class="d-none">Elemento que se va a ocultar</p>
+      <hr />
+      <p>Párrafo inferior</p>
+    </section>
+    <section>
+      <h2>visibility: hidden;</h2>
+      <p>
+        La propiedad visibility de CSS nos permite establecer si un elemento es
+        visible o invisible, de acuerdo al valor que elijamos establecer:
+      </p>
+      <ul>
+        <li>visible: indica que el elemento es mostrado.</li>
+        <li>
+          hidden: establece que el elemento se esconde, pero los demás elementos
+          de la página se comportan como si dicho elemento estuviese presente
+          ahí, respetan sus dimensiones. Es como si el elemento sólo fuese
+          invisible.
+        </li>
+        <li>
+          collapse: pensada para controlar la visibilidad de elementos de tabla,
+          filas y columnas.
+        </li>
+      </ul>
+      <p>Párrafo superior</p>
+      <hr />
+      <p id="phidden" class="v-hidden">Elemento que se va a ocultar</p>
+      <hr />
+      <p>Párrafo inferior</p>
+    </section>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

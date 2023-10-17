@@ -1,0 +1,115 @@
+/* Reset your CSS */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: blueviolet;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Centrando tu div */
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 200px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* Tu reto es lograr crear la imagen que viene adjunta, sólo con CSS */
+/* Tu código aquí */
+.container__divs{
+  position: relative;
+}
+
+.container__divs--child{
+  position: absolute;
+  background-color: white;
+  height: 140px;
+  width: 50px;
+  border:2px solid black;
+  border-radius: 8px;
+  border-bottom: 5px solid black;
+}
+
+.container__divs--child:nth-child(1){
+  top: 60px;
+ border-left: 6px solid black;
+}
+.container__divs--child:nth-child(2){
+  top: 60px;
+  left:50px
+}
+.container__divs--child:nth-child(3){
+  top: 60px;
+  left:100px
+}
+.container__divs--child:nth-child(4){
+  top: 60px;
+  left:150px
+}
+.container__divs--child:nth-child(5){
+  top: 60px;
+  left:200px
+}
+.container__divs--child:nth-child(6){
+  top: 60px;
+  left:250px
+}
+.container__divs--child:nth-child(7){
+  top: 60px;
+  left:300px
+}
+.container__divs--child:nth-child(8){
+  top: 60px;
+  left:350px
+}
+.container__divs--child:nth-child(9){
+  top: 60px;
+  left:400px
+}
+.container__divs--child:nth-child(10){
+  top: 60px;
+  left:450px;
+  border-right: 6px solid black;
+}
+
+/* tecla negra */
+.container__divs--child > div {
+  position: absolute;
+  background-color: black;
+  width: 25px;
+  height: 60px;
+  left: -10px;
+}

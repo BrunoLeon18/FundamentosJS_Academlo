@@ -1,0 +1,149 @@
+/* Palabras clave */
+.key-words li:nth-child(1) {
+  color: red;
+}
+.key-words li:nth-child(2) {
+  color: lime;
+}
+.key-words li:nth-child(3) {
+  color: blue;
+}
+.key-words li:nth-child(4) {
+  color: fuchsia;
+}
+.key-words li:nth-child(5) {
+  color: gray;
+}
+.key-words li:nth-child(6) {
+  color: teal;
+}
+
+/* Hexadecimal */
+.rgb-hexadecimal li:nth-child(1) {
+  color: #ff0000;
+  /* Hexadecimal con opacidad RGBa */
+  color: #ff0000e7;
+  /* Cuando tenemos valores repetidos podemos acortarlos, no es muy usado, pero es posible */
+  color: #f00;
+}
+.rgb-hexadecimal li:nth-child(2) {
+  color: #00ff00;
+  color: #0f0;
+}
+.rgb-hexadecimal li:nth-child(3) {
+  color: #0000ff;
+  color: #00f;
+}
+.rgb-hexadecimal li:nth-child(4) {
+  color: #ff00ff;
+}
+.rgb-hexadecimal li:nth-child(5) {
+  color: #808080;
+}
+.rgb-hexadecimal li:nth-child(6) {
+  color: #008080;
+}
+
+/* Numerico */
+.rgb-number li:nth-child(1) {
+  color: rgb(255, 0, 0);
+}
+.rgb-number li:nth-child(2) {
+  color: rgb(0, 255, 0);
+}
+.rgb-number li:nth-child(3) {
+  color: rgb(0, 0, 255);
+}
+.rgb-number li:nth-child(4) {
+  color: rgb(255, 0, 255);
+}
+.rgb-number li:nth-child(5) {
+  color: rgb(128, 128, 128);
+}
+.rgb-number li:nth-child(6) {
+  color: rgb(0, 128, 128);
+}
+
+
+/* Porcentual */
+.rgb-percent li:nth-child(1) {
+  color: rgb(100%, 0%, 0%);
+}
+.rgb-percent li:nth-child(2) {
+  color: rgb(0%, 100%, 0%);
+}
+.rgb-percent li:nth-child(3) {
+  color: rgb(0%, 0%, 100%);
+}
+.rgb-percent li:nth-child(4) {
+  color: rgb(100%, 0%, 100%);
+}
+.rgb-percent li:nth-child(5) {
+  color: rgb(50%, 50%, 50%);
+}
+.rgb-percent li:nth-child(6) {
+  color: rgb(0%, 50%, 50%);
+}
+
+/* RGBa */
+.rgba-colors li:nth-child(1) {
+  color: rgba(255, 0, 0, 0.5);
+}
+.rgba-colors li:nth-child(2) {
+  color: rgba(0, 255, 0, 0.436);
+}
+.rgba-colors li:nth-child(3) {
+  color: rgba(0, 0, 255, 0.08);
+}
+.rgba-colors li:nth-child(4) {
+  color: rgba(255, 0, 255, 0.886);
+}
+.rgba-colors li:nth-child(5) {
+  color: rgba(128, 128, 128, 0.811);
+}
+.rgba-colors li:nth-child(6) {
+  color: rgba(0, 128, 128, 0.621);
+}
+
+/* hls */
+/* El rango de valores en hls es en H de 0 - 300, L de 0% - 100% y S de 0% - 100% */
+.hls-colors li:nth-child(1) {
+  color: hsl(0, 100%, 50%);
+}
+.hls-colors li:nth-child(2) {
+  color: hsl(120, 100%, 50%);
+}
+.hls-colors li:nth-child(3) {
+  color: hsl(240, 100%, 50%);
+}
+.hls-colors li:nth-child(4) {
+  color: hsl(300, 100%, 50%);
+}
+.hls-colors li:nth-child(5) {
+  color: hsl(0, 0%, 50%);
+}
+.hls-colors li:nth-child(6) {
+  color: hsl(180, 100%, 25%);
+}
+
+/* hsla */
+.hlsa-colors li:nth-child(1) {
+  color: hsla(0, 100%, 50%, 0.418);
+}
+.hlsa-colors li:nth-child(2) {
+  color: hsla(120, 100%, 50%, 0.578);
+}
+.hlsa-colors li:nth-child(3) {
+  color: hsla(240, 100%, 50%, 0.589);
+}
+.hlsa-colors li:nth-child(4) {
+  color: hsla(300, 100%, 50%, 0.568);
+}
+.hlsa-colors li:nth-child(5) {
+  color: hsla(0, 0%, 50%, 0.539);
+}
+.hlsa-colors li:nth-child(6) {
+  color: hsla(180, 100%, 25%, 0.532);
+}
+
+/* https://coolors.co/ */

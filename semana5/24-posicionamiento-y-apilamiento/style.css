@@ -1,0 +1,96 @@
+.contenedor-z {
+    border: 1px solid;
+    height: 600px;
+    margin-top: 100px;
+  }
+  .relatives{
+    position: relative;
+  }
+  .cajita {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bloque1,
+  .bloque2,
+  .bloque3 {
+    position: absolute;
+    border:  1px solid;
+    width: 400px;
+    height: 400px;
+    transform: translateX(50%) translateY(25%);
+    background-color: #f0f0f0;
+  
+  }
+  
+  .bloque1>*,
+  .bloque2>*,
+  .bloque3>* {
+    position: inherit
+  }
+  
+  /* Bloque 1 */
+  .bloque1 {
+    top: 0;
+    left: 0;
+  }
+  
+  .bloque1 .cajita:nth-child(1) {
+    background-color: blueviolet;
+    top: 0;
+    left: 0px;
+  }
+  .bloque1 .cajita:nth-child(2) {
+    background-color: rgb(43, 150, 226);
+    top: 30px;
+    left: 30px;
+  }
+  .bloque1 .cajita:nth-child(3) {
+    background-color: rgb(43, 226, 70);
+    top: 60px;
+    left: 60px;
+  }
+  
+  /* Bloque 2 */
+  .bloque2 {
+    top: 0;
+    left: 100px;
+  }
+  
+  .bloque2 .cajita:nth-child(1) {
+    background-color: rgb(198, 226, 43);
+    top: 0;
+    left: 0;
+  }
+  .bloque2 .cajita:nth-child(2) {
+    background-color: rgb(250, 205, 43);
+    top: 30px;
+    left: 30px;
+  }
+  .bloque2 .cajita:nth-child(3) {
+    background-color: rgb(199, 155, 23);
+    top: 60px;
+    left: 60px;
+  }
+  
+  /* Bloque 3 */
+  .bloque3 {
+    top: 0;
+    left: 200px;
+  }
+  
+  .bloque3 .cajita:nth-child(1) {
+    background-color: rgb(198, 43, 87);
+    top: 0;
+    left: 0;
+  }
+  .bloque3 .cajita:nth-child(2) {
+    background-color: rgb(167, 75, 143);
+    top: 30px;
+    left: 30px;
+  }
+  .bloque3 .cajita:nth-child(3) {
+    background-color: rgb(255, 108, 145);
+    top: 60px;
+    left: 60px;
+  }

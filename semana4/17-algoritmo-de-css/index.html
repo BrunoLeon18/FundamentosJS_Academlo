@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algortimo de CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Algoritmo de CSS</h1>
+  <P>El Algoritmo de CSS hace referencia a la forma en que el navegador 
+    aplica los estilos al documento HTML. Es vital 
+    entender este concepto para que comprendas cómo se 
+    aplican y en algunas ocasiones cómo se sobreescriben las 
+    reglas CSS.</P>
+  <section>
+    <h2>Tipos de algoritmos CSS</h2>
+    <article>
+      <h3>Cascada</h3>
+      <p class="cascada">La Cascada es el mecanismo en que el navegador aplica 
+        los estilos. Y toma en cuenta lo siguiente en este 
+        orden:</p>
+        <ol>
+          <li>El User Agent (los estilos por defecto del navegador)</li>
+          <li>Los estilos especificados por el usuario.</li>
+          <li>La especificidad de las reglas.</li>
+        </ol>
+        <p class="cascada">La cascada en las hojas de estilo significa que el orden de las reglas importa en CSS: cuando dos reglas tienen la misma especificidad, se aplica la que aparece en último lugar en el CSS.</p>
+    </article>
+    <article>
+      <h3>Especificidad</h3>
+      <p>La especificidad mide cuán específica es la selección de un selector.
+        La Especificidad se calcula de la siguiente forma:</p>
+        <table border align="center">
+          <tr class="first-row">
+            <td>Etiquetas y pseudoelementos</td>
+            <td>0, 0, 0, 1</td>
+          </tr>
+          <tr atributo>
+            <td>Clases, atributos y pseudoclases</td>
+            <td>0, 0, 1, 0</td>
+          </tr>
+          <tr id="tercer_fila">
+            <td>Idetificadores</td>
+            <td>0, 1, 0, 0</td>
+          </tr>
+          <tr style="background-color: black;">
+            <td>Estilos en línea</td>
+            <td>1, 0, 0, 0</td>
+          </tr>
+        </table>
+        <p>La declaración <strong>!important</strong> rompe la especificidad.
+          La única manera de anular la declaración !important sería incluir otra declaración !important que aparezca más adelante.</p>
+    </article>
+    <article class="contenedor">
+      <h3>Herencia en CSS</h3>
+      <p>La herencia también debe entenderse en este contexto: algunos valores de las propiedades CSS que se han establecido para los elementos padre los heredan los elementos hijo, pero otros no.</p>
+    </article>
+  </section>
+</body>
+</html>

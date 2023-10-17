@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades de medida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Unidades de Medida</h1>
+    <p>
+      En CSS se utilizan dos unidades diferentes: relativas y absolutas. Es
+      importante conocer la diferencia para entender qué dimensiones van a tener
+      los elementos.
+    </p>
+    <section>
+      <h2>Absolutas</h2>
+      <p>
+        En general, son unidades que siempre tienen el mismo tamaño de acuerdo a
+        su tipo, por ejemplo: centímetros (cm), milímetros (mm), pulgadas (in),
+        picas (pc), píxeles (px).
+      </p>
+      <div class="absoluta">contenido</div>
+    </section>
+    <section>
+      <h2>Relativas</h2>
+      <p>
+        Las unidades de longitud relativa (em, rem, vw, vh, %) son relativas a
+        algo más, por ejemplo, al tamaño de la letra del elemento principal o al
+        tamaño de la ventana gráfica. La ventaja de usar unidades relativas es
+        que con una planificación cuidadosa puedes lograr que el tamaño del
+        texto u otros elementos escalen en relación con todo lo demás en la
+        página.
+      </p>
+      <div class="relativa">contenido</div>
+    </section>
+    <section>
+      <h2>Conozcamos cada una de las unidades relativas principales en CSS</h2>
+      <article>
+        <h3>« em »</h3>
+        <p>
+          EM será relativo a al tamaño de fuente del padre. No es muy
+          recomendable utilizar esta unidad de medida, ya que tienes una alta
+          probabilidad de cometer un error de cálculo. Además tienes que
+          escribir demasiado código mientras intentas hacer que un sitio web sea
+          responsivo en todos los tamaños de pantallas y esto consume mucho
+          tiempo.
+        </p>
+        <div class="padre-em">
+          <div class="em">contenido</div>
+        </div>
+        <h3>Ejemplo de porqué no usar em</h3>
+        <ul class="contenedor em">
+          <li>
+            Child 1
+            <ul>
+              <li>
+                Child2
+                <ul>
+                  <li>Child3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>« rem »</h3>
+        <p>
+          La unidad REM depende del elemento raíz (El elemento HTML). El tamaño
+          por defecto de la fuente del elemento raíz (en HTML) es de 16px.
+          Entonces 1 REM = 16px
+        </p>
+        <div class="contenedor rem">
+          <p>Unidad relativa rem</p>
+        </div>
+      </article>
+      <article>
+        <h3>« % »</h3>
+        <p>
+          El porcentaje que indiques será relativo a las medidas de su padre. Si
+          su padre tiene 100px de ancho y tú indicas 10%, el ancho de tu
+          elemento hijo será de 10px
+        </p>
+        <div class="contenedor porcentaje-padre">
+          <div class="porcentaje">Unidad relativa %</div>
+        </div>
+      </article>
+      <article>
+        <h3>« vw | vh »</h3>
+        <p>
+          VW significa Viewport Width (ancho del dispositivo). Funciona como las
+          unidades de porcentaje, especificar 10vw es equivalente a ocupar 10%
+          del ancho visible de la pantalla.
+        </p>
+        <p>
+          VH significa Viewport Height (altura del dispositivo). También
+          funciona como porcentaje, especificar 10vh es equivalente a ocupar 10%
+          de la altura visible de la pantalla.
+        </p>
+        <div class="contenedor vw-vh">Unidad relativa vw | vh</div>
+      </article>
+    </section>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

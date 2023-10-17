@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" type="module" defer></script>
+  <title>Módulos</title>
+</head>
+<body>
+  <h1>Módulos</h1>
+  <p>Durante mucho tiempo, JavaScript existió sin una sintaxis de módulo a nivel de lenguaje, eso no fue un problema, porque inicialmente los scripts eran pequeños y simples, por lo que no era necesario. Pero con el tiempo los scripts se volvieron cada vez más complejos, por lo que la comunidad inventó una variedad de formas de organizar el código en módulos.</p>
+  <section>
+    <h2>¿Qué es un módulo?</h2>
+    <p>Un módulo es solo un archivo. Un script es un módulo. Tan sencillo como eso.</p>
+    <p>Como los módulos admiten palabras clave y características especiales, debemos decirle al navegador que un script debe tratarse como un módulo, utilizando el atributo type="module".</p>
+  </section>
+  <section>
+    <h2>Beneficios de los módulos:</h2>
+    <ul>
+      <li>Siempre en modo estricto: Los módulos siempre trabajan en modo estricto. Por ejemplo, asignar a una variable sin declarar nos dará un error.</li>
+      <li>Alcance a nivel de módulo: Cada módulo tiene su propio alcance de nivel superior. En otras palabras, las variables y funciones de nivel superior de un módulo no se ven en otros scripts.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Import | Export</h2>
+    <p>Los módulos pueden cargarse entre sí y usar directivas especiales export e import para intercambiar funcionalidad, llamar a funciones de un módulo de otro:</p>
+    <ul>
+      <li>La palabra clave export etiqueta las variables y funciones que deberían ser accesibles desde fuera del módulo actual.</li>
+      <li>import permite importar funcionalidades desde otros módulos.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Aprendamos a utilizar los módulos desde el navegador y desde node</h2>
+  </section>
+</body>
+</html>

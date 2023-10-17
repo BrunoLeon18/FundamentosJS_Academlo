@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid CSS</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Grid CSS</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Conceptos básicos</h2>
+      <p>El sistema de grid de CSS es un sistema de filas y columnas que nos permite organizar el contenido de una
+        página web de una forma más ordenada y estructurada. Actualmente es el sistema más poderoso en CSS, ya que a diferencia de Flxbox, el cual es unidimensional, grid es un sistema bidimensional.</p>
+
+      <img src="grid01.png" alt="grid" width="400">
+
+      <ul>
+        <li>Contenedor: es el elemento que contiene a todos los elementos que queremos organizar.</li>
+        <li>Elementos: son los elementos que queremos organizar dentro del contenedor.</li>
+        <li>Filas: son las líneas horizontales que dividen el contenedor.</li>
+        <li>Columnas: son las líneas verticales que dividen el contenedor.</li>
+        <li>Celdas: son las intersecciones de las filas y columnas.</li>
+        <li>Áreas: son las áreas que se forman al unir varias celdas.</li>
+        <li>Líneas: son las líneas que dividen las filas y columnas.</li>
+        <li>Bandas: son las áreas que se forman entre dos líneas consecutivas.</li>
+      </ul>
+
+    </section>
+
+    <section>
+
+      <h2>Propiedades del contenedor</h2>
+      <p>Para poder utilizar el sistema de grid de CSS, primero debemos definir un contenedor que será el que contendrá
+        a todos los elementos que queremos organizar. Para ello, utilizamos la propiedad display con el valor grid.</p>
+      <div class="contenedor">
+        <div class="elemento">1</div>
+        <div class="elemento">2</div>
+        <div class="elemento">3</div>
+        <div class="elemento">4</div>
+        <div class="elemento">5</div>
+        <div class="elemento">6</div>
+        <div class="elemento">7</div>
+        <div class="elemento">8</div>
+        <div class="elemento">9</div>
+      </div>
+
+      <h3>Grid explícito</h3>
+      <p>El grid explícito es el grid que se crea cuando se especifica el número de filas y columnas.</p>
+      
+      <p>Una vez definido el contenedor, podemos definir las filas y columnas que queremos que tenga. Para ello,
+        utilizamos la propiedad grid-template-columns y grid-template-rows. En estas propiedades, podemos definir el
+        tamaño de las filas y columnas utilizando unidades de medida como px, em, rem, %, etc.</p>
+      <h3>Ejemplo un Grid de 3x3</h3>
+      <div class="contenedor-explicito">
+        <div class="elemento">1</div>
+        <div class="elemento">2</div>
+        <div class="elemento">3</div>
+        <div class="elemento">4</div>
+        <div class="elemento">5</div>
+        <div class="elemento">6</div>
+        <div class="elemento">7</div>
+        <div class="elemento">8</div>
+        <div class="elemento">9</div>
+      </div>
+
+
+      <h3>Grid implícito</h3>
+      <p>El grid implícito es el grid que se crea por defecto cuando no se especifica el número de filas y columnas.</p>
+
+      <h3>Ejemplo</h3>
+      <div class="contenedor-implicito">
+        <div class="elemento">1</div>
+        <div class="elemento">2</div>
+        <div class="elemento">3</div>
+        <div class="elemento">4</div>
+        <div class="elemento">5</div>
+        <div class="elemento">6</div>
+        <div class="elemento">7</div>
+        <div class="elemento">8</div>
+        <div class="elemento">9</div>
+        <div class="elemento">10</div>
+        <div class="elemento">11</div>
+        <div class="elemento">12</div>
+        <div class="elemento">13</div>
+        <div class="elemento">14</div>
+        <div class="elemento">15</div>
+        <div class="elemento">16</div>
+        <div class="elemento">17</div>
+        <div class="elemento">18</div>
+        <div class="elemento">19</div>
+        <div class="elemento">20</div>
+        <div class="elemento">21</div>
+        <div class="elemento">22</div>
+        <div class="elemento">23</div>
+        <div class="elemento">24</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Propiedades de los elementos</h2>
+      <p>Para poder organizar los elementos dentro del contenedor, utilizamos las propiedades grid-column-start,
+        grid-column-end, grid-row-start y grid-row-end.</p>
+
+      <h3>Grid explícito</h3>
+
+      <h3>Ejemplo 4x3</h3>
+      <div class="contenedor2">
+        <div class="elemento">1</div>
+        <div class="elemento">2</div>
+        <div class="elemento">3</div>
+        <div class="elemento">4</div>
+        <div class="elemento">5</div>
+        <div class="elemento">6</div>
+        <div class="elemento">7</div>
+        <div class="elemento">8</div>
+        <div class="elemento">9</div>
+        <div class="elemento">10</div>
+      </div>
+    </section>
+
+    <h3>Grid Areas</h3>
+
+    <p>Mediante los grids CSS es posible indicar el nombre y posición concreta de cada área de una cuadrícula. Para ello utilizaremos la propiedad grid-template-areas, donde debemos especificar el orden de las áreas en la cuadrícula. Posteriormente, en cada ítem hijo, utilizamos la propiedad grid-area para indicar el nombre del área del que se trata:</p>
+
+    <div class="container-areas">
+      <header class="header">Header</header>
+      <nav class="nav">Nav</nav>
+      <aside class="aside-top">Aside</aside>
+      <main class="main">Main</main>
+      <aside class="aside-bottom">Aside</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+  </main>
+</body>
+
+</html>

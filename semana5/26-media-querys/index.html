@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media-Queries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Responsive Design</h1>
+  <p>Antes de pasar al tema de Media-Querys es importante conocer el término "Diseño Responsivo" el cual se refiere al proceso de adaptar una página al viewport (área visible del navegador que se muestra en la pantalla) de todo tipo de dispositivos, como tablets o móviles.</p>
+  <p>Actualmente manejamos dos tipos de técnicas en el desarrollo web: mobile first y desktop first.</p>
+  <p>Otra cosa a tomar en cuenta con el viewport de dispositivos móviles es la manera en la que se va a visualizar tu página, ya que la vista puede ser vertical (portrait) u horizontal (landscape).</p>
+  <img src="https://www.fuegoyamana.com/wp-content/uploads/2017/03/MF-03.jpg" alt="responsive-design">
+  <section>
+    <h2>Media Queries</h2>
+    <p>Los media queries son utilizados en CSS para cambiar ciertos valores de los elementos dependiendo del tamaño u orientación del viewport.</p>
+    <img src="anatomia.jpg" alt="Media-Query" class="anatomia">
+    <article>
+      <h3>Tipos de media type</h3>
+      <p>Existen diferentes tipos de media type como: all, print, speech y screen. Sin embargo, para el diseño web utilizaremos screen, que es el destinado para las pantallas.</p>
+      <p class="ejemplo1">EJEMPLO</p>
+    </article>
+    <article>
+      <h3>Operadores lógicos en media queries</h3>
+      <p>Para incluir dos o más expresiones en una media query se pueden utilizar operadores lógicos como not, and y only.</p>
+      <p class="ejemplo2">EJEMPLO</p>
+    </article>
+    <article>
+      <h3>Lista de Queries</h3>
+      <p>También se pueden utilizar múltiples queries separadas por comas, si cualquiera de las queries en la lista es verdadera, la hoja de estilo asociada es aplicada, es decir, actua como una operación lógica "or".</p>
+      <p class="ejemplo3">EJEMPLO</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Técnicas del Responsive Design</h2>
+    <article>
+      <h3>Mobile first</h3>
+      <p>Consiste en comenzar estilando basándonos en el viewport de dispositivos móviles, Smartphones, Tablets, y posteriormente ir adaptándolo a dispositivos con viewport más grandes como Laptos o PC's.</p>
+    </article>
+    <article>
+      <h3>Desktop first</h3>
+      <p>Consiste en comenzar estilando basándonos en el viewport de dispositivos grandes partiendo de PC's, Laptops, para luego ir adaptando este diseño a viewport más pequeñas, como las de los dispositivos móviles.</p>
+    </article>
+    <div class="container">
+    </div>
+  </section>
+
+</body>
+</html>
